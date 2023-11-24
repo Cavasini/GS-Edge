@@ -85,11 +85,11 @@ Para visualizar e interagir com os dados provenientes do ESP32, implementamos o 
 - Link do Freeboard <a href="https://freeboard.io/board/pvoOVL">Clique aqui para ver</a>
 
 
-## Iniciando a aplicação
+## ✅ Iniciando a aplicação
 
 ![Esp32 no wokwi](imgs/img01.jpeg)
 
-- Antes da aplicação ser iniciada, é necessário abrir o Freeboard para receber as informações passadas pelo MQTT.
+- Antes da aplicação ser iniciada, é necessário abrir o Freeboard para receber as informações passadas pelo MQTT. <a href="https://freeboard.io/board/pvoOVL">Clique aqui para ver</a>
 
 - Como o usuário não está logado, o acesso às dados é negado.
 <img src="imgs/img05.jpeg" alt="Texto Alternativo" width="700">
