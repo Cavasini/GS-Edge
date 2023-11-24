@@ -17,71 +17,68 @@ O Projeto VITA busca implementar um sistema de gestão de estoque inteligente em
 - Falta de Alertas Antecipados.
 - Complexidade na Integração ao Fluxo de Trabalho.
 
-### 🌐 Tecnologias Utilizadas
+## 🗃 Funcionalidades do Sistema
 
-- React: Biblioteca JavaScript para a criação de interfaces de usuário interativas.
+### 🔓 Autenticação de Funcionários via Keypad
 
-- JavaScript: Linguagem de programação fundamental para o desenvolvimento web.
+O nosso sistema oferece uma forma eficiente e rapidá de autenticação para os funcionários através do keypad.
 
-- Vite: Ferramenta de construção rápida para projetos web modernos.
+### 📊 Monitoramento de Níveis de Estoque
 
-- React Router DOM: Biblioteca para controle de navegação em aplicativos React.
+Após efetuar o login, os funcionários têm acesso à funcionalidade de verificação dos níveis de estoque. 
+Essa ferramenta permite um acompanhamento em tempo real do status dos itens armazenados. 
+Caso seja identificada uma quantidade baixa de algum produto, o sistema notifica automaticamente, proporcionando uma gestão proativa e evitando possíveis problemas de falta de estoque.
 
-- Sass: Utilizamos Sass para a estilização do projeto, permitindo uma abordagem mais modular e organizada na criação de estilos.
+### 📆 Verificação da Validade dos Produtos
 
-- Hooks em React: Foram utilizados hooks como useState e useEffect para a transição e gerenciamento de dados entre os componentes, garantindo uma experiência de usuário fluente e interativa.
+Além da verificação de nível de estoque, implementamos uma funcionalidade que verifica a validade dos produtos armazenados. 
+Caso a validade de um item esteja próxima do vencimento ou tenha expirado, o sistema automaticamente notifica o administrador. 
 
-- Styled Components: Biblioteca para estilização de componentes em React.
+### 🔒 Deslogar como Funcionário
 
+A última funcionalidade oferecida é a opção de deslogar como funcionário. 
+Isso proporciona segurança adicional, permitindo que os usuários encerrem sua sessão quando necessário, especialmente em ambientes compartilhados.
 
-- JSON Server: Para simular uma API e facilitar o desenvolvimento, utilizamos o JSON Server para criar um servidor RESTful a partir de um arquivo JSON.
+## 📋 Registro no postman
 
-
-## 🧠 Funcionalidades Principais
-
-- Login Seguro: Verificação das credenciais do usuário em relação ao banco de dados.
-
-- Redirecionamento Automático: Após o login bem-sucedido, os usuários são redirecionados automaticamente para a página inicial do projeto.
-
-- Menu Dropdown Personalizado: Na parte superior esquerda, os usuários têm acesso a um menu dropdown.
-
-- Perfil do Usuário: O dropdown exibe informações detalhadas, como nome de usuário e endereço de e-mail, proporcionando uma experiência personalizada.
-
-- Opção de Deslogar: Os usuários podem efetuar logout facilmente através do dropdown, garantindo a segurança dos dados e permitindo uma transição suave entre sessões.
+- Para realizar este projeto, foi usado do fiware descomplicado do Professor Cabrini,<a href="https://github.com/fabiocabrini/fiware">Clique aqui para ver</a>.
   
-
-- API Local: A aplicação é alimentada por uma API local que armazena os dados dos usuários cadastrados no arquivo dados.json.
-
-
-### 🔑 Credenciais para login:
-
-- Todos os dados para login estão no dados.json
+- Baixe o material e abra o Postman.
   
-#### usuário padrão
-- username: cavasini
-- senha : cavasinifiap
+- Exporte os comandos disponíveis no material.
+  
+- Substitua a URL pelo endereço do broker.
+  
+- Vá para a seção "3. Provisioning a Smart Lamp" no material.
+  
+- No corpo (body) da requisição, substitua 'lamp' e 'lamp001' pelos nomes desejados para o registro.
+  
+- Insira os tópicos desejados, informando o nome e tipo (int, string, float, etc).
+  
+- Certifique-se de que o dispositivo foi registrado.
+  
+- Acesse a seção "5. List all Devices Provisioned" no material.
 
+## 🌐 Tecnologias utilizadas
+- WiFi:
+**Biblioteca utilizada para facilitar a conexão e configuração da rede WiFi**
+- PubSubClient:
+**Biblioteca utilizada para implementação MQTT**
+- LiquidCrystal_I2C:
+**Biblioteca utilizada para usar o lcd_I2c**
+- DHTesp:
+**Biblioteca utilizada para usar o sensor DHT no Esp**
 
-## 📂 Deploy do Projeto com Vercel
-Para acessar e visualizar a versão mais recente do projeto Vita, você pode visitar a aplicação hospedada na plataforma Vercel. A Vercel é uma plataforma de deploy que oferece escalabilidade e desempenho para garantir uma ótima experiência ao usuário.
+## 📟 ESP32 e Wokwi Simulator
+O ESP32 é um microcontrolador poderoso e versátil, amplamente utilizado para projetos de Internet das Coisas (IoT). 
+Neste projeto, exploramos suas capacidades utilizando o simulador Wokwi, que oferece uma plataforma virtual para experimentação sem a necessidade de hardware físico. Isso proporciona um ambiente de desenvolvimento conveniente e eficiente.
 
-### Para acessar o projeto, https://gs-psi.vercel.app/
+- Link do do Wokwi <a href="https://wokwi.com/projects/382150998462319617">Clique aqui para ver</a>
 
-## 🤝 Integrantes do Grupo
-- Matheus Cavasini - 97722
-- Lourenzo Ramos - 99951
+## 🛰️ Servidor de IoT
+A aplicação ESP32 no simulador Wokwi está conectada a um servidor de IoT, permitindo a troca de dados de forma eficiente. Isso possibilita o monitoramento remoto e a interação com o ESP32 por meio da internet.
 
-## ⚙️ Executando o Projeto
-Siga os passos abaixo para executar o projeto em sua máquina local:
+## 🖥️ Freeboard Dashboard
+Para visualizar e interagir com os dados provenientes do ESP32, implementamos o uso do Freeboard, uma plataforma de dashboard que facilita a criação de interfaces intuitivas e personalizáveis. O Freeboard permite a exibição em tempo real das informações coletadas pelo ESP32, oferecendo uma experiência de monitoramento simplificada.
 
-- Clone este repositório em sua máquina: git clone https://github.com/Cavasini/GS.git
-- Navegue até o diretório do projeto: cd GS
-- Instale as dependências: npm install ou yarn install
-
-### 🚀 Iniciando o Projeto
-
-#### Início Rápido com Concurrently
-
-O Projeto VITA facilita o desenvolvimento ao utilizar a biblioteca Concurrently. Com essa ferramenta, é possível iniciar tanto o servidor local JSON quanto o projeto React com um único comando.
-
-- npm run dev
+- Link do Freeboard <a href="https://freeboard.io/board/pvoOVL">Clique aqui para ver</a>
