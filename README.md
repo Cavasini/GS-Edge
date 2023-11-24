@@ -82,3 +82,9 @@ A aplicação ESP32 no simulador Wokwi está conectada a um servidor de IoT, per
 Para visualizar e interagir com os dados provenientes do ESP32, implementamos o uso do Freeboard, uma plataforma de dashboard que facilita a criação de interfaces intuitivas e personalizáveis. O Freeboard permite a exibição em tempo real das informações coletadas pelo ESP32, oferecendo uma experiência de monitoramento simplificada.
 
 - Link do Freeboard <a href="https://freeboard.io/board/pvoOVL">Clique aqui para ver</a>
+
+
+## Iniciando a aplicação
+
+
+
