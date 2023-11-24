@@ -66,8 +66,9 @@ Isso proporciona segurança adicional, permitindo que os usuários encerrem sua 
 **Biblioteca utilizada para implementação MQTT**
 - LiquidCrystal_I2C:
 **Biblioteca utilizada para usar o lcd_I2c**
-- DHTesp:
-**Biblioteca utilizada para usar o sensor DHT no Esp**
+- Keypad:
+**Biblioteca utilizada para usar o keypad
+
 
 ## 📟 ESP32 e Wokwi Simulator
 O ESP32 é um microcontrolador poderoso e versátil, amplamente utilizado para projetos de Internet das Coisas (IoT). 
@@ -86,5 +87,40 @@ Para visualizar e interagir com os dados provenientes do ESP32, implementamos o 
 
 ## Iniciando a aplicação
 
+![Esp32 no wokwi](imgs/img01.jpeg)
 
+- Antes da aplicação ser iniciada, é necessário abrir o Freeboard para receber as informações passadas pelo MQTT.
+
+- Como o usuário não está logado, o acesso às dados é negado.
+<img src="imgs/img05.jpeg" alt="Texto Alternativo" width="700">
+  
+- Ao iniciar a aplicação, é mostrada a mensagem no lcd "Insira o codigo".
+  
+![Esp32 no wokwi](imgs/img02.jpeg)
+
+- Para logar como usuário, clique em qualquer tecla de 1 a 9.
+- Para confirmar, clique 0.
+- Funcionário Logado.
+
+![Esp32 no wokwi](imgs/img03.jpeg)
+
+- Com o funcionário logado as funções de verificarValidade() e verificarEstoque() começam a funcionar em loop infinito.
+  
+- Função verificarValidade(): verifica as validades dos itens e da um MQTT.publish nos itens fora de validade.
+
+- Função verificarEstoque(): verifica o nivel do estoque de cada item. Se o nivel for menor que 50, ele da um MQTT.publish nos itens que estão com estoque baixo e a porcentagem do nivel.
+
+- No freeboard, é possivel ver: o codigo do funcionário logado e os dados que estão sendo publicados pelas funções verificarValidade() e verificarEstoque().
+
+<img src="imgs/img04.jpeg" alt="Texto Alternativo" width="700">
+
+- Se o funcionário quiser deslogar, é somente necessário apertar a tecla 0 do keypad.
+
+- Com o funcionário deslogado, o lcd vai voltar ao inicio da aplicação.
+
+![Esp32 no wokwi](imgs/img02.jpeg)
+
+- e o freeboard vai mostrar acesso negado às informações, pois o funcionário não está logado
+
+<img src="imgs/img05.jpeg" alt="Texto Alternativo" width="700">
 
