@@ -4,7 +4,6 @@
 #include <LiquidCrystal_I2C.h>
 
 LiquidCrystal_I2C LCD = LiquidCrystal_I2C(0x27, 16, 2);
-
 const byte LINHAS = 4;
 const byte COLUNAS = 4;
 char teclas[LINHAS][COLUNAS] = {
@@ -15,7 +14,6 @@ char teclas[LINHAS][COLUNAS] = {
 };
 byte pinosLinhas[LINHAS] = {2, 16, 17, 18};
 byte pinosColunas[COLUNAS] = {25, 26, 27, 14};
-
 int numeros[] = {1, 2, 3, 4, 5, 6, 7, 8, 9 };
 bool dentroValidadeItem[] = {true, true, false, false, true, false, true, true, true};
 const char *funcionario_id[] = {"1001", "1002", "1003", "1004", "1005", "1006", "1007", "1008", "1009"};

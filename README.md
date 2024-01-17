@@ -132,8 +132,7 @@ Ao executar este código, a aplicação inicia uma thread para o Flask e entra e
   
 - Como o usuário não está logado, o acesso às dados é negado.
 
-
-<img src="imgs/img05.jpeg" alt="Texto Alternativo" width="700">
+<img src="imgs\jsonWithouAcess.png" alt="Json com acesso negado" width="700">
   
 - Ao iniciar a aplicação, é mostrada a mensagem no lcd "Insira o codigo".
   
@@ -153,7 +152,7 @@ Ao executar este código, a aplicação inicia uma thread para o Flask e entra e
 
 - No json, é possivel ver: o codigo do funcionário logado e os dados que estão sendo publicados pelas funções verificarValidade() e verificarEstoque().
 
-<img src="imgs/img04.jpeg" alt="Texto Alternativo" width="700">
+<img src="imgs\jsonWithAcess.png" alt="Json com acesso permitido e exibindo dados do estoque como itens fora de validade, itens com nivel de estoque baixo e itens com a validade vencida" width="700">
 
 - Se o funcionário quiser deslogar, é somente necessário apertar a tecla 0 do keypad.
 
@@ -163,7 +162,7 @@ Ao executar este código, a aplicação inicia uma thread para o Flask e entra e
 
 - e o json vai mostrar acesso negado às informações, pois o funcionário não está logado
 
-<img src="imgs/img05.jpeg" alt="Texto Alternativo" width="700">
+<img src="imgs\jsonWithouAcess.png" alt="Json com acesso negado" width="700">
 
 ### 📫 API
 - As informações do json está sendo passada pela url **http://127.0.0.1:5000/**
